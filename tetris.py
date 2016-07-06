@@ -1,4 +1,3 @@
-# hw7-collab-tetris
 # Sarah Wang + junewang + Section II
 # Partner: Megha Joshi (meghajos)
 
@@ -263,10 +262,6 @@ def redrawAll(canvas, data):
     drawGame(canvas, data)
     drawScore(canvas, data)
     drawGameOver(canvas, data)
-
-####################################
-# use the run function as-is
-####################################
 
 def run(width, height):
     def redrawAllWrapper(canvas, data):
