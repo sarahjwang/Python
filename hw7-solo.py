@@ -1,15 +1,9 @@
-# hw7-solo.py
 # Sarah Wang + junewang + Section II
 
 from tkinter import *
 from math import sqrt
 
-####################################
-# customize these functions
-####################################
-
 def init(data):
-    # load data.xyz as appropriate
     data.rows, data.cols = data.rows, data.cols
     data.margin, data.lineLength = 100, 100
     data.circleDiameter, data.circleRadius = 40, 20
@@ -314,10 +308,6 @@ def redrawAll(canvas, data):
         canvas.create_text(data.width//2, data.height//2,
         text="GAME OVER!", font="Arial 50 bold", fill="white")
 
-####################################
-# use the run function as-is
-####################################
-
 def run(rows, cols, width, height, maxSecondsPerTurn):
     def redrawAllWrapper(canvas, data):
         canvas.delete(ALL)
@@ -366,5 +356,3 @@ def playDotsAndBoxes(rows, cols, maxSecondsPerTurn):
     width = 2*margin + diameter*(rows+1) + margin*(cols)
     height = 2*margin + diameter*(cols+1) + margin*(rows)
     run(rows, cols, width, height, maxSecondsPerTurn)
-
-playDotsAndBoxes(3,3,5)
